@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "colourful",
+    "version": "1.0",
+    "description": "kaleidoscope for the everyday browser",
+    "content_scripts": [
+        {
+          "matches": ["https://www.google.com/*"],
+          "js": ["jquery.min.js", "./main.js"]
+        }
+      ]
+}
+
+
+
