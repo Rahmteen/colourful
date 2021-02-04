@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('red').addEventListener ('click', () =>  {
       chrome.tabs.query({currentWindow : true, active : true}, (tabs) => {
         chrome.tabs.insertCSS(tabs[0].id, 
-          {code: `html, body {background: rgb(140, 70, 70) !important; color: red !important;}`}
+          {code: `html, body {background: rgb(206, 19, 19) !important; color: red !important;}`}
         );
       });
     }, false);
@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
         chrome.tabs.query({currentWindow : true, active : true}, (tabs) => {
           chrome.tabs.insertCSS(tabs[0].id, 
             {code: `html, body {
-                -webkit-animation: background 8s cubic-bezier(1,0,0,1) infinite;
-                animation: background 8s cubic-bezier(1,0,0,1) infinite;  
+                -webkit-animation: background 14s cubic-bezier(1,0,0,1) infinite;
+                animation: background 14s cubic-bezier(1,0,0,1) infinite;  
               }
               
               
@@ -46,27 +46,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }, false);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-///
-// var colors = ['green', 'orange', 'blue']; // Define Your colors here, can be html name of color, hex, rgb or anything what You can use in CSS
-// var active = 0;
-// setInterval(function(){
-//     document.querySelector('body').style.background = colors[active];
-//     active++;
-//     if (active == colors.length) active = 0;
-// }, 30000);
-
-
-// bodyTag.setAttribute('style', `background-color: red !important`, );
-// bodyTag.setAttribute('style', `background: red !important`);

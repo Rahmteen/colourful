@@ -5,17 +5,16 @@
     "description": "kaleidoscope for the everyday browser",
     "content_scripts": [
         {
-          "matches": ["https://www.google.com/*"],
+          "matches": ["https://*/*", "http://*/*"],
           "js": ["jquery.min.js", "./main.js"]
         }
       ],
     "browser_action": {
-    "default_icon" : "c-logo.png",
+    "default_icon" : "c-5logo.png",
     "default_popup": "popup.html",
-    "default_title": "My First Chrome Extension"
+    "default_title": "Colourful"
     },
-    "permissions": [
-      "https://www.google.com/*",
+    "permissions": ["https://*/*", "http://*/*",
       "tabs"]
 }
 

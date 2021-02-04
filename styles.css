@@ -1,47 +1,49 @@
 html,
 body {
   height: 100%;
-  font-family:Arial, Helvetica, sans-serif;
-
 }
-
 
 button {
   display: inline-block;
-  border-radius: 4px;
-  /* background-color: pin; */
+  border-radius: 8px;
+  box-shadow: 4px 6px 1px 1px #a4a4a4ee;
   border: none;
-  color: #FFFFFF;
+  font-family: monospace;
+  /* color: #FFFFFF; */
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   padding: 15px;
   width: 180px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  -webkit-animation: color-change 14s infinite;
+  animation: color-change 14s infinite; 
 }
 
 #red {
-  background-color: rgb(140, 70, 70);
+  border: solid 1px  #ffffffee;
+  background-color: rgb(206, 19, 19);
 }
 
 #grey {
+  border: solid 1px  #ffffffee;
   background-color: rgb(155, 155, 155)
 }
 
 #green {
+  border: solid 1px  #ffffffee;
   background-color: rgb(109, 172, 109);
 }
 
 #random {
-  
+  border: solid 1px  #ffffffee;
   max-width: 100%;
   max-height: 60vh;
   margin: auto;
-  -webkit-animation: background 8s cubic-bezier(1,0,0,1) infinite;
-  animation: background 8s cubic-bezier(1,0,0,1) infinite;  
+  -webkit-animation: background 10s cubic-bezier(1,0,0,1) infinite, color-change 8s infinite;
+  animation: background 10s cubic-bezier(1,0,0,1) infinite, color-change 8s infinite;  
 }
-
 
 @-webkit-keyframes background {
   0% { background-color: #f99; }
@@ -57,6 +59,11 @@ button {
   100% { background-color: #f99; }
 }
 
+@-webkit-keyframes color-change {
+  0% { color: white; }
+  50% { color: black; }
+  100% { color: white; }
+}
 
 button span {
   cursor: pointer;
@@ -83,31 +90,19 @@ button:hover span:after {
   right: 0;
 }
 
-
-#popup{
-    /* border: solid 30px rgb(60, 106, 164);  */
-
-    max-width: 99%;
-    max-height: 99%;
-    width:400px;
-    height:400px;
-    text-align:center;
-    padding-top: 50px;
-}
-
 ::-webkit-scrollbar {
   display: none;
 }
 
-body {
-  padding-bottom: 50px;
+#popup {
+  height: 483px;
+  text-align:center;
+  padding: 50px;
   max-width: 100%;
-  max-height: 90vh;
-  margin: auto;
-  -webkit-animation: background 8s cubic-bezier(1,0,0,1) infinite;
-  animation: background 8s cubic-bezier(1,0,0,1) infinite;  
+  max-width: fit-content;
+  -webkit-animation: background 14s cubic-bezier(1,0,0,1) infinite;
+  animation: background 14s cubic-bezier(1,0,0,1) infinite;  
 }
-
 
 @-webkit-keyframes background {
   0% { background-color: #f99; }
@@ -121,4 +116,11 @@ body {
   33% { background-color: #9f9; }  
   67% { background-color: #99f; }
   100% { background-color: #f99; }
+}
+
+#footer {
+  font-family:monospace;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
 }
