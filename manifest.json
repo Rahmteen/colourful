@@ -13,7 +13,10 @@
     "default_icon" : "c-logo.png",
     "default_popup": "popup.html",
     "default_title": "My First Chrome Extension"
-    }
+    },
+    "permissions": [
+      "https://www.google.com/*",
+      "tabs"]
 }
 
 
